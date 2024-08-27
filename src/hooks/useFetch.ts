@@ -9,7 +9,7 @@ export default function useFetch() {
       const requestOptions = {
         method,
         headers: myHeaders,
-        ...(data ? { body:  JSON.stringify(data) } : {}),
+        ...(data ? { body: JSON.stringify(data) } : {}),
       };
 
       const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}${route}`, requestOptions);
